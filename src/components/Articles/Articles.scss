@@ -1,0 +1,13 @@
+@import "../../index";
+
+.articles-wrapper {
+  width: $window-width;
+  margin: 50px auto;
+
+  div.container {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-auto-flow: column;
+  }
+}

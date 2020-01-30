@@ -1,0 +1,33 @@
+@import "../../../index";
+
+div.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  justify-content: center;
+
+  img.card-image {
+    width: 325px;
+    height: 225px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  div.description {
+    width: 80%;
+    margin: auto;
+  }
+  button {
+    display: flex;
+    justify-content: center;
+    background: map-get($text-color, secondary-gray);
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    height: 35px;
+    margin: 0 auto 10px;
+    color: map-get($text-color, primary-white);
+    font-size: map-get($font-sizes, medium);
+    font-weight: bold;
+  }
+}

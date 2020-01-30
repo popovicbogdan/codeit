@@ -1,0 +1,14 @@
+div.logo {
+  background-color: black;
+  flex-basis: 15%;
+  align-self: center;
+  margin: auto;
+  height: 45px;
+  z-index: 2;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  div.logo {
+    flex-basis: 10%;
+  }
+}

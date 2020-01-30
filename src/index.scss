@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+}
+$font-sizes: (
+  small: 12px,
+  normal: 14px,
+  large: 18px,
+  huge: 24px
+);
+$window-width: 100vw;
+
+$text-color: (
+  primary-gray: #404040,
+  secondary-gray: #707070,
+  tertiary-gray: #9d9898,
+  primary-white: #ffffff,
+  background-gray: #d1d1d1
+);

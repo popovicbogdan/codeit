@@ -1,0 +1,115 @@
+@import "../../index";
+
+@mixin navLink {
+  font-size: map-get($font-sizes, medium);
+  text-decoration: none;
+  color: map-get($text-color, secondary-gray);
+}
+
+nav {
+  display: flex;
+  width: $window-width;
+  position: absolute;
+  margin: 20px 0;
+  ul {
+    list-style-type: none;
+    a {
+      @include navLink;
+    }
+  }
+}
+@media (max-width: 767px) {
+  nav {
+    margin: 0;
+    div.logo {
+      justify-self: flex-start;
+      margin: 20px auto auto 35px;
+    }
+
+    svg.ham {
+      justify-self: flex-end;
+      z-index: 2;
+      flex-basis: 10%;
+      margin: 30px 20px auto;
+      fill: map-get($text-color, primary-gray);
+      cursor: pointer;
+    }
+    .hide-mobile {
+      display: none;
+    }
+    ul {
+      z-index: 2;
+      display: flex;
+      margin: auto;
+      position: absolute;
+      width: 40%;
+      height: 100vh;
+      top: 0;
+      right: 0;
+      padding: 0;
+      flex-direction: column;
+      background: map-get($text-color, primary-gray);
+      li {
+        text-align: center;
+        padding: 10px;
+        a {
+          color: map-get($text-color, primary-white);
+        }
+      }
+
+      li:hover {
+        background: map-get($text-color, tertiary-gray);
+      }
+      li.close-icon {
+        text-align: end;
+        #close {
+          fill: map-get($text-color, primary-white);
+          cursor: pointer;
+          width: 20px;
+        }
+      }
+      li.close-icon:hover {
+        background: none;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  nav {
+    svg.ham {
+      display: none;
+    }
+    ul {
+      z-index: 2;
+      display: flex;
+      margin: auto;
+      flex-direction: row;
+      flex-basis: 40%;
+      justify-content: space-between;
+
+      #close {
+        display: none;
+      }
+      li {
+        margin: 0 10px;
+
+        .home {
+          @include navLink;
+          font-weight: bold;
+        }
+        .login {
+          border: 1px solid white;
+          border-radius: 5px;
+          padding: 7px 35px;
+          font-weight: bold;
+          color: white;
+          background: transparent;
+        }
+        .login:hover {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+      }
+    }
+  }
+}
