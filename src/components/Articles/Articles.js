@@ -8,7 +8,7 @@ const Articles = () => {
 
   useEffect(() => {
     axios
-      .get("https://picsum.photos/v2/list?page=2&limit=6")
+      .get("https://picsum.photos/v2/list?page=1&limit=6")
       .then(res => setItems(res.data))
       .catch(err => console.error(err));
   }, []);
@@ -19,6 +19,7 @@ const Articles = () => {
   //add grid view to the container
   return (
     <div className="articles-wrapper">
+      <h2 className="title">ARTICLES</h2>
       <div className="container">{itemsList}</div>
     </div>
   );

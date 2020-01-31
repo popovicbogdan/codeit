@@ -9,7 +9,7 @@ const Dashboard = () => {
     <div className="dashboard">
       <Header />
       <Homepage />
-      <Articles />
+      <Articles id="Articles" />
     </div>
   );
 };

@@ -3,8 +3,9 @@
 div.card {
   display: flex;
   flex-direction: column;
+  max-width: 325px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
   justify-content: center;
 
   img.card-image {
@@ -16,18 +17,29 @@ div.card {
   div.description {
     width: 80%;
     margin: auto;
+    p {
+      margin: 32px 0;
+    }
+    button {
+      display: flex;
+      justify-content: center;
+      background: map-get($text-color, secondary-gray);
+      border: none;
+      border-radius: 5px;
+      width: 70%;
+      height: 35px;
+      margin: 0 auto 25px;
+      color: map-get($text-color, primary-white);
+      font-size: map-get($font-sizes, medium);
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    }
   }
-  button {
-    display: flex;
-    justify-content: center;
-    background: map-get($text-color, secondary-gray);
-    border: none;
-    border-radius: 5px;
-    width: 70%;
-    height: 35px;
-    margin: 0 auto 10px;
-    color: map-get($text-color, primary-white);
-    font-size: map-get($font-sizes, medium);
-    font-weight: bold;
-  }
+}
+div.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }

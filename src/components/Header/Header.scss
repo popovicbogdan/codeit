@@ -11,6 +11,7 @@ nav {
   width: $window-width;
   position: absolute;
   margin: 20px 0;
+
   ul {
     list-style-type: none;
     a {
@@ -30,7 +31,7 @@ nav {
       justify-self: flex-end;
       z-index: 2;
       flex-basis: 10%;
-      margin: 30px 20px auto;
+      margin: 30px 30px auto;
       fill: map-get($text-color, primary-gray);
       cursor: pointer;
     }
@@ -62,6 +63,7 @@ nav {
       }
       li.close-icon {
         text-align: end;
+        margin-right: 15px;
         #close {
           fill: map-get($text-color, primary-white);
           cursor: pointer;
@@ -74,8 +76,10 @@ nav {
     }
   }
 }
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   nav {
+    margin: 20px 15px;
+
     svg.ham {
       display: none;
     }
@@ -87,15 +91,21 @@ nav {
       flex-basis: 40%;
       justify-content: space-between;
 
-      #close {
-        display: none;
-      }
       li {
         margin: 0 10px;
-
+        #close {
+          display: none;
+        }
+        a {
+          font-size: map-get($font-sizes, small);
+        }
+        a:hover {
+          filter: drop-shadow(0 0 5px map-get($text-color, secondary-gray));
+        }
         .home {
           @include navLink;
           font-weight: bold;
+          font-size: map-get($font-sizes, small);
         }
         .login {
           border: 1px solid white;
@@ -106,8 +116,23 @@ nav {
           background: transparent;
         }
         .login:hover {
+          filter: none;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
             0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  nav {
+    ul {
+      li {
+        a {
+          font-size: map-get($font-sizes, medium);
+        }
+        .home {
+          font-size: map-get($font-sizes, medium);
         }
       }
     }

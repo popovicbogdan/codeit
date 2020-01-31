@@ -4,10 +4,40 @@
   width: $window-width;
   margin: 50px auto;
 
+  h2.title {
+    text-align: center;
+    font-weight: bolder;
+    font-size: map-get($font-sizes, huge);
+    color: map-get($text-color, primary-gray);
+    margin-bottom: 100px;
+  }
   div.container {
+    justify-items: center;
     width: 80%;
     margin: auto;
     display: grid;
-    grid-auto-flow: column;
+    grid-auto-flow: row;
+    gap: 35px;
+  }
+}
+@media (min-width: 768px) {
+  .articles-wrapper {
+    div.container {
+      grid-auto-flow: column;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+
+      width: 90%;
+    }
+  }
+}
+@media (min-width: 1192px) {
+  .articles-wrapper {
+    div.container {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      width: 90%;
+      margin: auto;
+    }
   }
 }

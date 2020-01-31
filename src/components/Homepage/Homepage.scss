@@ -8,21 +8,46 @@
   justify-content: center;
 
   svg.diagonals {
-    width: 100%;
+    width: $window-width;
     height: 100%;
     position: absolute;
     z-index: 1;
 
     line {
-      stroke: map-get($text-color, secondary-gray);
+      stroke: map-get($text-color, tertiary-gray);
       stroke-width: 0.5;
     }
   }
   .play {
     z-index: 2;
-    width: 5em;
-    height: 5em;
+    width: 10%;
+    height: 10%;
+    min-width: 50px;
+    min-height: 50px;
     margin: auto;
     cursor: pointer;
   }
+  .play:hover {
+    filter: drop-shadow(0 0 10px map-get($text-color, secondary-gray));
+  }
+  .arrow {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 40px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .arrow:hover {
+    filter: drop-shadow(0 0 5px map-get($text-color, secondary-gray));
+    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  }
 }
+// @media (min-width: 768px) {
+//   .homepage {
+//     .play {
+//       width: 5em;
+//       height: 5em;
+//     }
+//   }
+// }

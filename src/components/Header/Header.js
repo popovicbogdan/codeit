@@ -28,18 +28,18 @@ const Header = () => {
           />
         </li>
         <li>
-          <a href="/" className="home">
+          <a href="#" className="home">
             HOME
           </a>
         </li>
         <li>
-          <a href="/">SECTION1</a>
+          <a href="#Articles">ARTICLES</a>
         </li>
         <li>
-          <a href="/">SECTION3</a>
+          <a href="#">SECTION3</a>
         </li>
         <li>
-          <a href="/">SECTION4</a>
+          <a href="#">SECTION4</a>
         </li>
         <li>
           <a href="/">SECTION5</a>
