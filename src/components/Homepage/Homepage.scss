@@ -4,8 +4,9 @@
   display: flex;
   height: 100vh;
   width: $window-width;
-  background: map-get($text-color, background-gray);
+  background: map-get($colors, background-gray);
   justify-content: center;
+  align-content: center;
 
   svg.diagonals {
     width: $window-width;
@@ -14,40 +15,84 @@
     z-index: 1;
 
     line {
-      stroke: map-get($text-color, tertiary-gray);
+      stroke: map-get($colors, tertiary-gray);
       stroke-width: 0.5;
     }
   }
   .play {
+    position: absolute;
+    align-self: center;
     z-index: 2;
-    width: 10%;
-    height: 10%;
+    width: 15%;
+    height: 15%;
     min-width: 50px;
     min-height: 50px;
+    max-width: 110px;
+    max-height: 110px;
     margin: auto;
     cursor: pointer;
   }
   .play:hover {
-    filter: drop-shadow(0 0 10px map-get($text-color, secondary-gray));
+    filter: $hover-effect;
   }
+
+  .intro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    width: 80%;
+    margin: auto;
+
+    .title {
+      margin-top: 130px;
+      color: map-get($colors, primary-white);
+    }
+    p {
+      position: relative;
+      margin-top: 80px;
+      font-size: map-get($font-sizes, medium);
+      color: map-get($colors, primary-gray);
+    }
+    button {
+      width: 150px;
+      height: 50px;
+      border-radius: 10px;
+      border: none;
+      font-weight: bold;
+      z-index: 3;
+      cursor: pointer;
+      color: map-get($colors, primary-gray);
+      &:hover {
+        filter: $hover-effect;
+      }
+    }
+  }
+
   .arrow {
     position: absolute;
     width: 20px;
     height: 20px;
-    bottom: 40px;
+    bottom: 15px;
     cursor: pointer;
     z-index: 2;
   }
   .arrow:hover {
-    filter: drop-shadow(0 0 5px map-get($text-color, secondary-gray));
-    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    filter: $hover-effect;
   }
 }
-// @media (min-width: 768px) {
-//   .homepage {
-//     .play {
-//       width: 5em;
-//       height: 5em;
-//     }
-//   }
-// }
+@media (min-width: 768px) {
+  .homepage {
+    .intro {
+      width: 30%;
+      left: 25%;
+      .title {
+        margin-top: 40px;
+      }
+      p {
+        margin-top: 20px;
+        font-size: map-get($font-sizes, large);
+      }
+    }
+  }
+}

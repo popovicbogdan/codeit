@@ -12,11 +12,9 @@ const Articles = () => {
       .then(res => setItems(res.data))
       .catch(err => console.error(err));
   }, []);
-  console.log(items);
 
   const itemsList = items.map(item => <Card item={item} key={item.id} />);
 
-  //add grid view to the container
   return (
     <div className="articles-wrapper">
       <h2 className="title">ARTICLES</h2>

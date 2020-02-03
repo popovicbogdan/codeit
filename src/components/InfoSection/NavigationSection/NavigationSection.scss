@@ -1,0 +1,18 @@
+@import "../../../index";
+
+div.section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5px;
+
+  p.section-name {
+    font-size: map-get($font-sizes, medium);
+    color: map-get($colors, primary-gray);
+    margin-bottom: 5px;
+  }
+  a.anchor {
+    font-size: map-get($font-sizes, small);
+    color: map-get($colors, secondary-gray);
+    text-decoration: none;
+  }
+}

@@ -1,19 +1,22 @@
 @import "../../index";
 
+@mixin title {
+  text-align: center;
+  font-weight: bolder;
+  font-size: map-get($font-sizes, huge);
+  color: map-get($colors, primary-gray);
+  margin-bottom: 100px;
+}
+
 .articles-wrapper {
-  width: $window-width;
-  margin: 50px auto;
+  width: 100%;
+  margin: 100px auto;
 
   h2.title {
-    text-align: center;
-    font-weight: bolder;
-    font-size: map-get($font-sizes, huge);
-    color: map-get($text-color, primary-gray);
-    margin-bottom: 100px;
+    @include title;
   }
   div.container {
     justify-items: center;
-    width: 80%;
     margin: auto;
     display: grid;
     grid-auto-flow: row;
@@ -36,8 +39,14 @@
     div.container {
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      width: 90%;
-      margin: auto;
+      width: 80%;
+    }
+  }
+}
+@media (min-width: 1441px) {
+  .articles-wrapper {
+    div.container {
+      width: 70%;
     }
   }
 }

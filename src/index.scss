@@ -11,10 +11,12 @@ $font-sizes: (
 );
 $window-width: 100vw;
 
-$text-color: (
+$colors: (
   primary-gray: #404040,
   secondary-gray: #707070,
   tertiary-gray: #9d9898,
   primary-white: #ffffff,
   background-gray: #d1d1d1
 );
+
+$hover-effect: drop-shadow(0 0 5px map-get($colors, secondary-gray));

@@ -3,14 +3,19 @@
 div.card {
   display: flex;
   flex-direction: column;
-  max-width: 325px;
+
+  width: 80%;
+  max-width: 450px;
+
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
   justify-content: center;
 
   img.card-image {
-    width: 325px;
-    height: 225px;
+    // max-width: 325px;
+    // max-height: 225px;
+    width: 100%;
+
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
@@ -23,23 +28,23 @@ div.card {
     button {
       display: flex;
       justify-content: center;
-      background: map-get($text-color, secondary-gray);
+      background: map-get($colors, secondary-gray);
       border: none;
       border-radius: 5px;
       width: 70%;
       height: 35px;
       margin: 0 auto 25px;
-      color: map-get($text-color, primary-white);
+      color: map-get($colors, primary-white);
       font-size: map-get($font-sizes, medium);
       font-weight: bold;
       cursor: pointer;
-    }
-    button:hover {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.2);
+
+      &:hover {
+        filter: $hover-effect;
+      }
     }
   }
-}
-div.card:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  &:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  }
 }

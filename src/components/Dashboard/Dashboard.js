@@ -3,13 +3,21 @@ import "./Dashboard.scss";
 import Homepage from "../Homepage/Homepage";
 import Header from "../Header/Header";
 import Articles from "../Articles/Articles";
+import Slider from "../Slider/Slider";
+import InfoSection from "../InfoSection/InfoSection";
 
 const Dashboard = () => {
   return (
     <div className="dashboard">
       <Header />
+
       <Homepage />
-      <Articles id="Articles" />
+
+      <Articles />
+
+      <Slider />
+
+      <InfoSection />
     </div>
   );
 };

@@ -2,8 +2,9 @@
 
 @mixin navLink {
   font-size: map-get($font-sizes, medium);
+
   text-decoration: none;
-  color: map-get($text-color, secondary-gray);
+  color: map-get($colors, secondary-gray);
 }
 
 nav {
@@ -32,7 +33,7 @@ nav {
       z-index: 2;
       flex-basis: 10%;
       margin: 30px 30px auto;
-      fill: map-get($text-color, primary-gray);
+      fill: map-get($colors, primary-gray);
       cursor: pointer;
     }
     .hide-mobile {
@@ -49,23 +50,23 @@ nav {
       right: 0;
       padding: 0;
       flex-direction: column;
-      background: map-get($text-color, primary-gray);
+      background: map-get($colors, primary-gray);
       li {
         text-align: center;
         padding: 10px;
         a {
-          color: map-get($text-color, primary-white);
+          color: map-get($colors, primary-white);
         }
       }
 
       li:hover {
-        background: map-get($text-color, tertiary-gray);
+        background: map-get($colors, tertiary-gray);
       }
       li.close-icon {
         text-align: end;
         margin-right: 15px;
         #close {
-          fill: map-get($text-color, primary-white);
+          fill: map-get($colors, primary-white);
           cursor: pointer;
           width: 20px;
         }
@@ -78,7 +79,7 @@ nav {
 }
 @media (min-width: 768px) {
   nav {
-    margin: 20px 15px;
+    // margin: 20px 15px;
 
     svg.ham {
       display: none;
@@ -100,7 +101,7 @@ nav {
           font-size: map-get($font-sizes, small);
         }
         a:hover {
-          filter: drop-shadow(0 0 5px map-get($text-color, secondary-gray));
+          filter: drop-shadow(0 0 5px map-get($colors, secondary-gray));
         }
         .home {
           @include navLink;
@@ -124,16 +125,17 @@ nav {
     }
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1441px) {
   nav {
     ul {
       li {
-        a {
-          font-size: map-get($font-sizes, medium);
-        }
+        a,
         .home {
-          font-size: map-get($font-sizes, medium);
+          font-size: map-get($font-sizes, large);
         }
+        // .home {
+        //   font-size: map-get($font-sizes, medium);
+        // }
       }
     }
   }

@@ -1,0 +1,67 @@
+@import "../Articles/Articles";
+@import "../../index";
+
+@mixin arrow {
+  cursor: pointer;
+  &:hover {
+    filter: $hover-effect;
+  }
+}
+
+div.slider {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 150px;
+  h2.title {
+    @include title;
+    margin-bottom: 50px;
+  }
+  p {
+    width: 80%;
+    margin: 0 auto 100px;
+  }
+
+  div.pics-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .arrow-right {
+      @include arrow;
+      transform: rotate(-90deg);
+    }
+    .arrow-left {
+      @include arrow;
+      transform: rotate(90deg);
+    }
+    .alice-carousel {
+      width: 85%;
+      justify-content: center;
+    }
+  }
+}
+
+.item {
+  width: 150px;
+  height: 75px;
+}
+.alice-carousel__stage-item {
+  text-align: center;
+}
+.alice-carousel__dots {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 1440px) {
+  div.slider {
+    width: 80%;
+    p {
+      justify-self: center;
+      width: 50%;
+    }
+  }
+  .item {
+    width: 200px;
+    height: 100px;
+  }
+}

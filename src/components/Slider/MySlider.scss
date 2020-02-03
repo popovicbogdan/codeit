@@ -1,0 +1,37 @@
+// @import "../Articles/Articles";
+
+// div.slider {
+//   h2.title {
+//     @include title;
+//     margin-bottom: 50px;
+//   }
+//   p {
+//     width: 80%;
+//     margin: auto;
+//   }
+
+//   div.pics-container {
+//     display: flex;
+//     margin: 10px;
+//     align-items: center;
+//     .arrow-left {
+//       transform: rotate(90deg);
+//     }
+//     .arrow-right {
+//       transform: rotate(-90deg);
+//     }
+//   }
+//   div.images {
+//     margin: 25px 10px;
+//     display: grid;
+//     grid-auto-flow: column;
+//     grid-template-columns: 1fr 1fr;
+//     overflow: hidden;
+//     gap: 25px;
+
+//     img {
+//       width: 150px;
+//       height: 75px;
+//     }
+//   }
+// }
